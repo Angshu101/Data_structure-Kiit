@@ -1,0 +1,33 @@
+ struct node *temp,*check,*prev;
+    temp=head;
+    //check=head;
+    int i;
+    while(temp!=NULL){
+        check=temp->next;
+        i=temp->data;
+        temp=temp->next;
+        while(check!=NULL){
+            prev=check;
+            
+            if(check->data==i){
+                 
+    // struct node *t,*p;
+    // p=NULL;
+    // t=check;
+    // if(t!=NULL && t->data==i){
+    //     t=t->next;
+    // }
+    // while(t !=NULL && t->data !=i){
+    //        p=t;
+    //        t=t->next;
+    //    }
+
+    //         p->next=t->next;
+             prev->next=check->next;
+            
+         
+            }
+            check=check->next;
+        }
+
+    }
